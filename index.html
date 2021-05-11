@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugaday chislo</title>
+
+    <script src="./assets/js/code.js"></script>
+
+    <link rel="stylesheet" href="./assets/bootstrap-5-css/bootstrap.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+
+    <div class="container mt-5 py-1">
+		
+		<h1 class="mb-4 mb-5 text-black-50 fw-bold">Угадай число от 1 до 100. </h1>
+        <h3 class="mb-4 mb-5 text-black-50 fw-bold"><output id="numberOfAttempts">Осталось попыток:10</output></h3>
+	
+		<!-- Input Data Form -->
+		<div class='row row-cols-sm row-cols-1 my-4 mb-5 g-0'>
+			<div class="form-group d-flex flex-row py-1">
+			  <label class="w-50" for="heightInput">Ваш вариант</label>
+			  <input
+                     type="number" 
+                     
+                     class="form-control" 
+                     id="numberInput" 
+                     min="1" 
+                     max="100" 
+                     
+                     step="1">
+			</div>
+
+							
+
+		</div>
+		  
+		<button id="GNBtn" onclick="guessTheNumber()" class="btn btn-outline-secondary w-100 align-middle">Дать ответ</button>
+		
+		<!-- /Input Data Form -->
+				
+		<h3 class='my-5 text-black-50'><output id="resultPlace"></output></h3>
+
+	</div>
+    
+</body>
+</html>
