@@ -45,7 +45,7 @@ function guessTheNumber() {
 
                     
 
-                    return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
+                    /*return; currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
                
                 
                 }
@@ -65,7 +65,7 @@ function guessTheNumber() {
                 
                 
 
-                return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
+                /*return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
             
             } else {
 
@@ -81,7 +81,7 @@ function guessTheNumber() {
                 
                 
 
-                return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/
+                /*return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/
             }   
         
     }      
