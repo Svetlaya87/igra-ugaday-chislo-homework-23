@@ -3,7 +3,7 @@
    console.log(randomNumber);
    
    let currentAttempt=10;
-   let y=true;
+   var y;
    
 
    
@@ -31,13 +31,14 @@ function guessTheNumber() {
 
                 } else {
 
-                    y=true;
+                    
+                    
                     resultPlace.innerHTML=`Вы выиграли! Ваш вариант ${numberFromUser} равен моему числу`;
                     currentAttempt--;
                     let numberRoundsToWin = 10-currentAttempt;
                     numberOfAttempts.innerHTML=`Вы выиграли за ${numberRoundsToWin} раунда`;
 
-                    
+                    y=true;
 
                     return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
                
@@ -48,27 +49,31 @@ function guessTheNumber() {
 
             if (numberFromUser != randomNumber) {
 
-                y=true;
+                
+                
 
                 resultPlace.innerHTML=`Вы проиграли. Загаданное число ${randomNumber}!`;
                 numberOfAttempts.innerHTML=`Осталось 0 попыток.`;
 
                 currentAttempt--;
-
+               
+                y=true;
                 
 
                 return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
             
             } else {
 
-                y=true;
-
+                
+                
                 currentAttempt--;
                 numberRoundsToWin = 10-currentAttempt;
 
                 numberOfAttempts.innerHTML=`Вы выиграли за ${numberRoundsToWin} раунда`;
                 resultPlace.innerHTML=`Вы выиграли! Ваш вариант ${numberFromUser} равен моему числу!`;
 
+                y=true;
+                
                 
 
                 return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/
@@ -81,23 +86,33 @@ function guessTheNumber() {
     if (y){
 
         
+        let tag1 = document.getElementById("GNBtn");
+        tag1.classList.add('d-none');
 
+
+        /*
         document.getElementById("GNBtn").addEventListener("click", function() {
             document.getElementById("buttonResult").innerHTML = "Начать новую игру!";
         });
 
         
         /*GNBtn.classList.add('disabled');*/
-        document.getElementById("GNBtn").addEventListener("click", function (NewGame2){
+        /*document.getElementById("GNBtn").addEventListener("click", function (NewGame2){
 
         
             NewGame2.location.reload();
-        });
+        });*/
 
-        NewGame.classList.add('d-none');
+        
 
        
-    } /*else {
+    } else {
+        let tag2 = document.getElementById("GNBtn");
+        tag2.classList.remove('d-none');
+    }
+    
+    
+    /*else {
         /*GNBtn.classList.remove('disabled');*/
       /*  let tag2= document.getElementById("buttonResult");
         tag2.removeEventListener("click", function(NewGame2)
