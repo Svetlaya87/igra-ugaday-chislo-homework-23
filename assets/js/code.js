@@ -35,7 +35,7 @@ function guessTheNumber() {
                     let numberRoundsToWin = 10-currentAttempt;
                     numberOfAttempts.innerHTML=`Вы выиграли за ${numberRoundsToWin} раунда`;
 
-                    return currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber) ;
+                    return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
                
                 
                 }
@@ -47,7 +47,7 @@ function guessTheNumber() {
                 resultPlace.innerHTML=`Вы проиграли. Загаданное число ${randomNumber}!`;
                 numberOfAttempts.innerHTML=`Осталось 0 попыток.`;
 
-                return currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber) ;
+                return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
             
             } else {
 
@@ -57,7 +57,7 @@ function guessTheNumber() {
                 numberOfAttempts.innerHTML=`Вы выиграли за ${numberRoundsToWin} раунда`;
                 resultPlace.innerHTML=`Вы выиграли! Ваш вариант ${numberFromUser} равен моему числу!`;
 
-                return currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber) ;
+                return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/
             }   
         
     }      
@@ -69,6 +69,11 @@ function guessTheNumber() {
                 
     
 }
+
+
+function NewGame() {
+    location.reload();
+} 
 
 
  
