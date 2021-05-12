@@ -15,6 +15,8 @@ function guessTheNumber() {
    numberFromUser = +numberInput.value;
    if (currentAttempt>1 && currentAttempt<=10) {
         numberOfAttempts.innerHTML=` У Вас осталось ${currentAttempt} попыток`;
+
+        
         
         
         if (numberFromUser>randomNumber) {
@@ -22,6 +24,8 @@ function guessTheNumber() {
             resultPlace.innerHTML=`Ваш вариант ${numberFromUser} больше моего числа`;
             currentAttempt--;
             numberOfAttempts.innerHTML=`Осталось попыток ${currentAttempt}`;
+
+        
 
         } else if (numberFromUser<randomNumber) {
 
@@ -31,6 +35,7 @@ function guessTheNumber() {
 
                 } else {
 
+                    y=true;
                     
                     
                     resultPlace.innerHTML=`Вы выиграли! Ваш вариант ${numberFromUser} равен моему числу`;
@@ -38,7 +43,7 @@ function guessTheNumber() {
                     let numberRoundsToWin = 10-currentAttempt;
                     numberOfAttempts.innerHTML=`Вы выиграли за ${numberRoundsToWin} раунда`;
 
-                    y=true;
+                    
 
                     return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
                
@@ -49,7 +54,7 @@ function guessTheNumber() {
 
             if (numberFromUser != randomNumber) {
 
-                
+                y=true;
                 
 
                 resultPlace.innerHTML=`Вы проиграли. Загаданное число ${randomNumber}!`;
@@ -57,14 +62,14 @@ function guessTheNumber() {
 
                 currentAttempt--;
                
-                y=true;
+                
                 
 
                 return; /*currentAttempt=10, randomNumber = Math.floor(Math.random()*100)+1, console.log(randomNumber)*/ 
             
             } else {
 
-                
+                y=true;
                 
                 currentAttempt--;
                 numberRoundsToWin = 10-currentAttempt;
@@ -72,7 +77,7 @@ function guessTheNumber() {
                 numberOfAttempts.innerHTML=`Вы выиграли за ${numberRoundsToWin} раунда`;
                 resultPlace.innerHTML=`Вы выиграли! Ваш вариант ${numberFromUser} равен моему числу!`;
 
-                y=true;
+                
                 
                 
 
@@ -112,16 +117,16 @@ function guessTheNumber() {
     }
     
     
-    /*else {
+   /* else {
         /*GNBtn.classList.remove('disabled');*/
-      /*  let tag2= document.getElementById("buttonResult");
+       /*let tag2= document.getElementById("buttonResult");
         tag2.removeEventListener("click", function(NewGame2)
            
        {
             NewGame2.location.reload();
         } );
     
-      /* }*/
+   /* }*/
     
       
      
